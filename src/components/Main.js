@@ -8,7 +8,13 @@ export default function Main(props) {
         <h2>Products</h2>
         <div className='row'>
           {products.map( (product) => (
-            <Product key={product.id} product={product} onAdd={onAdd} />
+            <div key={`card-${product.id}`}
+              className='card'>
+              <Product
+                key={product.id}
+                product={product}
+                onAdd={onAdd} />
+            </div>
           ))}
         </div>
       </main>
